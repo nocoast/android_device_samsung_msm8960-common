@@ -19,6 +19,7 @@ BOARD_VENDOR := samsung
 # Platform
 TARGET_BOARD_PLATFORM := msm8960
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
+TARGET_ARCH_VARIANT_CPU := cortex-a9
 
 # inherit from qcom-common
 -include device/samsung/qcom-common/BoardConfigCommon.mk
@@ -89,7 +90,8 @@ BOARD_NEEDS_MEMORYHEAPPMEM := true
 BOARD_HAVE_OLD_ION_API := true
 
 # Kernel time optimization
-KERNEL_HAS_GETTIMEOFDAY_HELPER := true
+# temp remove - causing issues with short/long presses
+# KERNEL_HAS_GETTIMEOFDAY_HELPER := true
 
 # We have the new GPS driver
 BOARD_HAVE_NEW_QC_GPS := true
